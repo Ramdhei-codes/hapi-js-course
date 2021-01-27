@@ -1,0 +1,24 @@
+{
+  "name": "hapi-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon --ext js,hbs",
+    "lint": "standard",
+    "lint-fix": "standard --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ramdhei Lopez Arcila <ramdhei2002@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/hapi": "^20.1.0",
+    "@hapi/inert": "^6.0.3",
+    "@hapi/vision": "^6.0.1",
+    "handlebars": "^4.7.6"
+  },
+  "devDependencies": {
+    "standard": "^16.0.3"
+  }
+}
