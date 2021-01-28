@@ -22,8 +22,6 @@ async function init() {
         await server.register(inert)
         await server.register(vision)
 
-        console.log(server)
-
         server.views({
             engines: {
                 hbs: handlebars
@@ -41,6 +39,25 @@ async function init() {
                 return h.view('index', {
                     title: 'home'
                 })
+            }
+        })
+
+        server.route({
+            method: 'GET',
+            path: '/register',
+            handler: (req, h) => {
+                return h.view('register', {
+                    title: 'Registro'
+                })
+            }
+        })
+
+        server.route({
+            method: 'POST',
+            path: '/register',
+            handler: (req, h) => {
+                console.log(req.payload)
+                return 'User created'
             }
         })
     
